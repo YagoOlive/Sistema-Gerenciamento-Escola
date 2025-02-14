@@ -16,17 +16,17 @@ Este projeto é um sistema em Java que permite o gerenciamento de dados de aluno
 ### 2. Gerenciamento de Membros
 O sistema gerencia os seguintes tipos de membros da escola:
 - **Aluno**
-  - Nome, CPF, Data de nascimento, Telefone
+  - Nome, CPF, Data de nascimento, Telefone, sexo
   - RA (Registro Acadêmico)
   - IRA (Índice de Rendimento Acadêmico)
 
 - **Funcionário Técnico-Administrativo**
-  - Nome, CPF, Data de nascimento, Telefone
+  - Nome, CPF, Data de nascimento, Telefone, sexo
   - Código funcional
   - Departamento
 
 - **Professor**
-  - Nome, CPF, Data de nascimento, Telefone
+  - Nome, CPF, Data de nascimento, Telefone, sexo
   - Código funcional
   - Área de atuação (Matemática, Física, Linguagens, etc.)
 
@@ -56,23 +56,23 @@ O sistema gerencia os seguintes tipos de membros da escola:
 ```plaintext
 /src
  ├── bean
- │   ├── Pessoa.java                       # Classe base abstrata para membros da escola
  │   ├── Aluno.java                        # Classe derivada para Aluno
  │   ├── Funcionario.java                  # Classe base abstrata para funcionários
- │   ├── FuncionarioTecnicoAdministrativo.java  # Classe para técnicos administrativos
+ │   ├── TecnicoAdministrativo.java        # Classe para técnicos administrativos
  │   ├── Professor.java                    # Classe para professores
  │   ├── PessoaValidator.java              # Classe com validação de CPF
  │   └── CpfInvalidoException.java         # Exceção personalizada para CPF inválido
  ├── dao
  │   ├── AlunoDAO.java                     # Operações de banco para Aluno
- │   ├── FuncionarioTADAO.java             # Operações de banco para Técnicos Administrativos
+ │   ├── FuncionarioDAO.java               # Operações de banco para Técnicos Administrativos
  │   └── ProfessorDAO.java                 # Operações de banco para Professores
  ├── conexao
  │   └── BancoDados.java                   # Classe para conexão com banco de dados
  └── gui
      ├── JFrameAluno.java                  # Interface gráfica para gerenciar alunos
-     ├── JFrameFuncionarioTA.java          # Interface gráfica para gerenciar técnicos administrativos
+     ├── JFrameFuncionario.java            # Interface gráfica para gerenciar técnicos administrativos
      ├── JFrameProfessor.java              # Interface gráfica para gerenciar professores
+     ├── JFrameOpcoes.java                 # Interface gráfica para gerenciar opções de entidades
      └── JFrameLogin.java                  # Interface gráfica para login
 
 
